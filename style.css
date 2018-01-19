@@ -1,0 +1,928 @@
+/*!
+Theme Name: Adam Champagne
+Theme URI: http://underscores.me/
+Author: Adam Champagne
+Author URI: http://adamchampagne.com/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: adam-champagne
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ Bootstrap to WordPress is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Reset
+2.0 Typography
+3.0 Elements
+4.0 Forms
+5.0 Navigation
+	5.1 Links
+	5.2 Menus
+6.0 Accessibility
+7.0 Alignments
+8.0 Clearings
+9.0 Widgets
+10.0 Content
+	10.1 Posts and pages
+	10.2 Asides
+	10.3 Comments
+11.0 Infinite scroll
+12.0 Media
+	12.1 Captions
+	12.2 Galleries
+13.0 Theme Specific Styles
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Reset
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+4.0 Forms
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+5.0 Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+5.1 Links
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
+
+.navbar-nav > li.current_page_item a,
+.navbar-nav > li.current_page_parent a {
+	color: white;
+}
+
+/* Small menu */
+.menu-toggle {
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+	}
+
+	.main-navigation ul {
+		display: none;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.paging-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+6.0 Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/*--------------------------------------------------------------
+7.0 Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+8.0 Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+9.0 Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+.widget_search .search-submit {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+10.0 Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+10.1 Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+10.2 Asides
+--------------------------------------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+10.3 Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+11.0 Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+12.0 Media
+--------------------------------------------------------------*/
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+12.1 Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+/*--------------------------------------------------------------
+12.2 Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/* --------------------------------------
+   13.0 Theme Specific Styles
+   -------------------------------------- */
+
+
+.navbar .dropdown-menu li {
+  width: 100%;
+  margin-left: 0 !important;
+}
+
+
+/* ==== GLOBAL ==== */
+
+#form-check {
+	display: none;
+}
+
+body {
+	margin-top: 0;
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+
+
+img {
+	width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+	font-family: 'Raleway', sans-serif;
+	/* letter-spacing: -2px; */
+	text-transform: uppercase;
+}
+
+.container-fluid>.row {
+	clear:both
+}
+
+
+
+/********************************
+		NAVIGATION
+********************************/
+.navbar {
+	background: #fff;
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+}
+
+a.navbar-brand {
+	font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.navbar-brand:hover {
+    color: #dd3333;
+}
+
+.nav a {
+	color: #333;
+}
+
+.nav a:hover {
+	color: #DD3232;
+}
+
+.navbar-toggle {
+	border: 1px solid #333;
+	border-radius: 0;
+}
+
+.icon-bar {
+	border: 1px solid;
+}
+
+/* Seperator */
+li#nav-seperator {
+    margin-top: 12px;
+}
+
+/* Social Icons */
+
+.nav>li>a.social-icons {
+	padding:15px 4px;
+}
+
+.nav>li>a.social-icons:first-child {
+	 padding-left: 13px;
+  }
+
+.nav>li>a:hover {
+    background-color: #fff;
+}
+
+.nav>li {
+    position: relative;
+    display: inline-block;
+}
+
+
+.table {
+	display: table;
+	height: 100%;
+}
+
+.table-cell {
+	display: table-cell;
+  	vertical-align: middle;
+	float: none;
+}
+
+section {
+	padding: 40px 0;
+}
+
+
+/********************************
+		TABS
+********************************/
+
+.ui-widget.ui-widget-content {
+    border: none;
+}
+
+
+
+.ui-tabs .ui-state-default {
+	background: #fff;
+	color: #333;
+	border-radius: 2px;
+	border-color: #fff;
+}	
+
+.ui-tabs .ui-state-active {
+    border: 1px solid #fff;
+    background: #dd3333;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.ui-tabs .ui-state-hover {
+	background: #ddd;
+	border: 1px solid #ddd;
+	color: #333;
+}
+
+
+
+.ui-tabs .ui-tabs-nav {
+    margin: 0 30px;
+    padding: .2em .2em 0;
+}
+
+.ui-widget-header {
+    border: none;
+    background: #fff;
+
+    font-weight: bold;
+}
+
+.ui-tabs .ui-tabs-nav {
+    margin: 0 10px;
+}
+
+.ui-tabs .ui-tabs-nav {
+	text-align: center;
+}
+
+.ui-tabs .ui-tabs-nav li {
+	float: none !important;
+	display: inline-block;
+}
+
+
+
+
+/********************************
+		HERO SECTION
+********************************/
+
+.container-fluid .jumbotron {
+  border-radius: 0;
+}
+
+#hero {
+background: url('/wp-content/themes/adam-champagne/assets/img/hero-bg-2.jpg') no-repeat;
+color: #fff;
+background-size: cover;
+padding: 125px 0;
+}
+
+
+#mugshot {	
+border: 5px solid #fff;
+max-width: 200px;
+width: 200px;
+margin: 10px auto;
+} 
+
+/********************************
+  ABOUT SECTION
+********************************/
+
+section#about {
+  padding-top: 0;
+}
+
+/********************************
+  SKILLS SECTION
+********************************/
+
+#skills h5 {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: .8rem;
+}
+
+#skills .row {
+  margin: 10px 0;
+}
+
+section#skills {
+  background-color: #ddd;
+}
+
+#skills .col-sm-6 {
+  padding-left: 0;
+}
+
+h5.progress-label {
+  /* display: block; */
+  margin: 0 10px 0 0;
+  padding-top: 0;
+  line-height: 20px;
+
+}
+
+#skills-row {
+margin-top: 20px;
+}
+
+
+/********************************
+  PORTFOLIO SECTION
+********************************/
+
+.ui-tabs .ui-tabs-nav li {
+  font-family: lato;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.portfolioImg {
+  padding: 15px 0;
+}
+
+
+
+#portfolio a .overlay {
+width: 100%;
+height: 100%;
+padding-top: 35%;
+padding-left: 10%;
+padding-right: 10%;
+background: rgba(255, 255, 255, .9);
+position: absolute;
+top: 0;
+right: 0;
+opacity: 0;
+transition: all .5s;
+}
+
+
+.overlay h2 {
+  font-size: 1.3rem;
+  color: #434343;
+}
+
+
+#portfolio a:hover .overlay {
+  opacity: 1;
+}
+
+/* MODAL */
+
+.modal-footer {
+border-top: none;
+}
+
+.vertical-alignment-helper {
+  display:table;
+  height: 100%;
+  width: 100%;
+  pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+}
+.vertical-align-center {
+  /* To center vertically */
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events:none;
+}
+.modal-content {
+  /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+  width:inherit;
+  height:inherit;
+  /* To center horizontally */
+  margin: 0 auto;
+  pointer-events: all;
+  max-width: 90%;
+}
+
+.ui-widget-content a {
+color: #dd3333;
+text-decoration: none;
+}
+
+.ui-widget-content a:hover {
+color: #333;
+
+}
+
+.modal-content {
+border-radius: 0;
+}
+
+.modal-link a {
+  color: #dd3333;
+  text-decoration: none;
+}
+
+.modal-link a:hover {
+  color: #434343;
+}
+
+:focus {
+  outline: none;
+}
+
+a:focus {
+  outline: none;
+
+}
+
+#web-dev {
+  padding: 1rem;
+   }
+
+
+
+#web-apps {
+background: #eee;
+}
+
+
+.tag-row {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tag-row a {
+  background: #dd3333;
+  color: #fff;
+  padding: 3px 5px;
+  border-radius: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: .7rem;
+  text-decoration: none;
+  font-size: .7rem;
+  white-space: nowrap;
+}
+
+.tag-row a:hover {
+  background: #eee;
+  color: #434343;
+}
+
+
+
+/********************************
+  REFERENCES SECTION
+********************************/
+
+#references {
+background-color: #ddb333;
+}
+
+#references .row {
+  padding: 100px 0;
+}
+
+/* BLOCKQOUTE  */
+
+blockquote {
+border-left: none;
+
+}
+
+blockquote p {
+margin-left: 70px;
+}
+
+i.fa.fa-quote-left {
+  float: left;
+  font-size: 60px;
+margin: 20px 10px 20px 0;
+color: #fff;
+}
+
+blockquote footer {
+text-align: right;
+color: #333;
+}
+
+#underline {
+border-bottom: 1px solid #333;
+width: 50%;
+margin-left: 50%;
+margin-bottom: 15px;
+}
+
+
+#owl-demo .item   {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.owl-theme .owl-nav [class*="owl-"] {
+  color: #333;
+  font-size: 100%;
+  margin: 5px;
+  padding: 4px 10px;
+  background: transparent;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 2px solid #333;
+font-weight: 700;
+text-transform: uppercase;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+background: #333;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+background: #dd3333;
+}
+
+
+/********************************
+  FOOTER SECTION
+********************************/
+
+#footer {
+background-color: #333;
+}
+
+#footer label {
+color: #fff;
+}
+
+#footer p {
+color: #fff;
+margin-top: 20px;
+}
+
+/* CONTACT FORM 7 */
+
+div.wpcf7-mail-sent-ok {
+  border: 2px solid #dd3333;
+}
+
+.wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ok {
+  color: #fff;
+}
+
+/********************************
+  FOOTER NAV Section
+********************************/
+
+section#footer-nav {
+padding: 0;
+background-color: #222222;
+}
+
+#footer-nav .row {
+  padding-top: 12px;
+}
+
+p#copyright a {
+color: #ddd;
+}
+
+
+#footer-nav a.social-icons {
+  color: #ddd;
+}
+
+#footer-nav a.social-icons:hover {
+background-color: #222;
+color: #dd3333;
+}
+
+
+
+/*Extra small devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+  
+
+}
+
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+
+  /* HERO SECTION */
+  #hero h1 {
+    font-size: 4rem;
+    line-height: 3.5rem;
+  }
+
+  .modal-content {
+    max-width: 80%;
+  }
+
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+  #web-dev {
+    padding: 0;
+  }
+
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+  
+
+}
